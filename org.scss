@@ -511,7 +511,7 @@ pre.src-awk:before {
     content: "awk source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -520,7 +520,7 @@ pre.src-C:before {
     content: "C source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -529,7 +529,7 @@ pre.src-clojure:before {
     content: "clojure source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -538,7 +538,7 @@ pre.src-ditaa:before {
     content: "ditaa source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -547,7 +547,7 @@ pre.src-emacs-lisp:before {
     content: "emacs-lisp source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -556,7 +556,7 @@ pre.src-haskell:before {
     content: "haskell source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -565,7 +565,7 @@ pre.src-latex:before {
     content: "latex source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -574,7 +574,7 @@ pre.src-lisp:before {
     content: "lisp source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -583,7 +583,7 @@ pre.src-matlab:before {
     content: "matlab source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -592,7 +592,7 @@ pre.src-ocaml:before {
     content: "ocaml source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -601,7 +601,7 @@ pre.src-org:before {
     content: "org source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -610,7 +610,7 @@ pre.src-perl:before {
     content: "perl source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -619,7 +619,7 @@ pre.src-python:before {
     content: "python source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -628,7 +628,7 @@ pre.src-ruby:before {
     content: "ruby source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -637,7 +637,7 @@ pre.src-scheme:before {
     content: "scheme source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -646,7 +646,7 @@ pre.src-sh:before {
     content: "sh source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -655,7 +655,7 @@ pre.src-sqlite:before {
     content: "sqlite source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -664,7 +664,7 @@ pre.src-asymptote:before {
     content: "asymptote source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -673,7 +673,7 @@ pre.src-calc:before {
     content: "calc source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -682,7 +682,7 @@ pre.src-C++:before {
     content: "C++ source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -691,7 +691,7 @@ pre.src-css:before {
     content: "css source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -700,7 +700,7 @@ pre.src-dot:before {
     content: "dot source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -709,7 +709,7 @@ pre.src-gnuplot:before {
     content: "gnuplot source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -718,7 +718,7 @@ pre.src-java	:before {
     content: "java	 source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -727,7 +727,7 @@ pre.src-js:before {
     content: "js source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -736,7 +736,7 @@ pre.src-ledger:before {
     content: "ledger source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -745,7 +745,7 @@ pre.src-lilypond:before {
     content: "lilypond source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -754,7 +754,7 @@ pre.src-mscgen:before {
     content: "mscgen source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -763,7 +763,7 @@ pre.src-octave:before {
     content: "octave source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -772,7 +772,7 @@ pre.src-oz:before {
     content: "oz source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -781,7 +781,7 @@ pre.src-plantuml:before {
     content: "plantuml source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -790,7 +790,7 @@ pre.src-R:before {
     content: "R source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -799,7 +799,7 @@ pre.src-sass:before {
     content: "sass source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -808,7 +808,7 @@ pre.src-screen:before {
     content: "screen source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
@@ -817,7 +817,7 @@ pre.src-sql:before {
     content: "sql source.";
     display: block;
     padding: 0.6em 1em 0.4em 1em;
-    margin: -1em -1em 1em -1em;
+    margin: -1em -0.6em 1em -0.6em;
     font-size: 80%;
     text-align: right;
     @include background_opaque_15;
