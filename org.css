@@ -570,8 +570,23 @@ div.title {
   padding: .2em; }
 
 /* Source code formatting */
-code,
 tt,
+code {
+  color: #000000;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  font-family: "Ubuntu Mono", "DejaVu Sans Mono", monospace;
+  font-size: 10.5pt;
+  padding: 0em 1pt 0em 1pt; }
+  tt *,
+  code * {
+    font-family: "Ubuntu Mono", "DejaVu Sans Mono", monospace;
+    font-size: 10.5pt; }
+
+tt {
+  color: #0000FF; }
+
 pre,
 pre.src {
   background-color: #F5F5F5;
@@ -584,8 +599,6 @@ pre.src {
   font-size: 10.5pt;
   overflow: auto;
   padding: 5pt; }
-  code *,
-  tt *,
   pre *,
   pre.src * {
     font-family: "Ubuntu Mono", "DejaVu Sans Mono", monospace;
@@ -1378,20 +1391,6 @@ pre.src-sql:before {
   /* IE6-9 */ }
 
 /***********************************************/
-/*
-code {
-    background-color : $color_code_background;
-    color: $color_code_foreground;
-    font-style: $style_code;
-    font-weight: $weight_code;
-    text-decoration: $decoration_code;
-}
-*/
-/*
-tt {
-    color: #0000FF;
-}
-*/
 .org-info-search-highlight {
   background-color: #adefef;
   /* same color as emacs default */

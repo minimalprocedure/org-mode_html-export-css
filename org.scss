@@ -452,8 +452,25 @@ div.title {
 }
 
 /* Source code formatting */
-code,
 tt,
+code {
+    color: $color_code_foreground;
+    font-style: $style_code;
+    font-weight: $weight_code;
+    text-decoration: $decoration_code;
+    font-family: $font_monospace;
+    font-size: $font_size_mono;
+    padding: 0em 1pt 0em 1pt;
+    * {
+        font-family: $font_monospace;
+        font-size: $font_size_mono;
+    }
+}
+
+tt {
+    color: #0000FF;
+}
+
 pre,
 pre.src {
     background-color : $color_code_background;
@@ -806,20 +823,6 @@ pre.src-sql:before {
     @include background_opaque_15;
 }
 /***********************************************/
-/*
-code {
-    background-color : $color_code_background;
-    color: $color_code_foreground;
-    font-style: $style_code;
-    font-weight: $weight_code;
-    text-decoration: $decoration_code;
-}
-*/
-/*
-tt {
-    color: #0000FF;
-}
-*/
 
 .org-info-search-highlight
 {
