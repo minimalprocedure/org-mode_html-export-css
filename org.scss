@@ -296,7 +296,7 @@ body {
 ************************************************************************************/
 $i: 1;
 $size: 200%;
-$lheight: 2em;
+$lheight: 1.4em;
 @while $i <= 6 {
     h#{$i} {
        font-size: $size;
@@ -305,8 +305,10 @@ $lheight: 2em;
     }
     $size: $size - 20;
     $i: $i + 1;
-    $lheight: $lheight - 0.4em;
+    $lheight: $lheight - 0.1em;
+    @if $i == 6 {$lheight: $lheight + 0.2em;}
 }
+
 
 h1.title {
     background: $color_title_background none repeat scroll 0 0;
@@ -378,33 +380,36 @@ div#org-div-home-and-up {
 
 #table-of-contents {
     margin: 1em 0;
-    padding: .1em;
-    ul {
-        list-style: none;
-        li {
-            margin: 0em 0em 0em -0.4em;
-	    a {
-		color: $color_link_toc;
-		background-color: $color_link_toc_background;
-		padding: 1px;
-		text-decoration: none;
+    padding: 0.1em;
+    #text-table-of-contents {
+	margin-top: 0em;
+	ul {
+            list-style: none;
+            li {
+		margin: 0.2em 0em 0.2em -0.4em;
+		a {
+		    color: $color_link_toc;
+		    background-color: $color_link_toc_background;
+		    padding: 1px;
+		    text-decoration: none;
 
-		&:active {
-		    color: $color_link_toc_active;
-		}
+		    &:active {
+			color: $color_link_toc_active;
+		    }
 
-		&:hover {
-		    color: $color_link_toc_hover;
+		    &:hover {
+			color: $color_link_toc_hover;
+		    }
+		    &:visited {
+			color: $color_link_toc_visited;
+		    }
 		}
-		&:visited {
-		    color: $color_link_toc_visited;
-		}
-	    }
-        }
-        li:before {
-            font-weight: 700;
-            content: $list_bullet_toc;
-        }
+            }
+            li:before {
+		font-weight: 700;
+		content: $list_bullet_toc;
+            }
+	}
     }
 }
 
@@ -1561,5 +1566,9 @@ span.underline {
 .target {
     background-color: foreground;
 }
+
+/* FLOATING INDEX */
+
+@import "left-topic-index";
 
 

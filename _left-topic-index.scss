@@ -1,0 +1,99 @@
+body {
+    margin-top: 0em;
+}
+
+#content {
+    border: none !important;
+    background: $color_body_background !important;
+
+    .title {
+	position: fixed;
+	top: 0em;
+	left: 0em;
+	padding-top: 1.5em;
+	width: 100%;
+    }
+
+    p {
+	text-align: justify;
+    }
+    
+    & > div, & > section {
+	float: left;
+	width: 69%;
+	margin-left: 31%;
+	padding-left: 1em;
+	border-left: 1px solid $color_border;
+	h2:before {
+	    content: '';
+	    display:block;
+	    height: 3em;
+	    margin:-3em 0 0;
+	}
+	h3:before {
+	    content: '';
+	    display:block;
+	    height: 3.6em;
+	    margin:-3.6em 0 0;
+	}
+	h4:before {
+	    content: '';
+	    display:block;
+	    height: 4.2em;
+	    margin:-4.2em 0 0;
+	}
+	h5:before {
+	    content: '';
+	    display:block;
+	    height: 5.2em;
+	    margin:-5.2em 0 0;
+	}
+	h6:before {
+	    content: '';
+	    display:block;
+	    height: 6.2em;
+	    margin:-6.2em 0 0;
+	}
+    }
+
+    & > div[id*=outline-container-sec]:last-child,
+    & > section[id*=outline-container-sec]:last-child{
+	clear: both;
+	margin-bottom: 5.2em;
+	padding-bottom: 1em;
+    }
+}
+
+nav#table-of-contents {
+    float: left;
+    width: 30%;
+    margin: 0em 0.5% 0em -2em;
+    position: fixed;
+    
+    h2 {
+    }
+
+    & + div, & + section {
+	margin-top: -5.2em;
+	margin-top: 0em;
+    }
+
+    #text-table-of-contents ul:first-child {
+	margin-left: -1em;
+    }
+    #text-table-of-contents ul li {	
+	margin-left: -2em;
+	a {
+	    background: $color_body_background !important;
+	}
+    }
+}
+
+#postamble {
+    clear: both;
+    border-top: 1px solid $color_border;
+    position: fixed;
+    bottom: -0.4em;
+    width: 100%;
+    background: transparent;
+}
