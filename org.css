@@ -1971,7 +1971,8 @@ body {
     top: 0em;
     left: 0em;
     padding-top: 1.5em;
-    width: 100%; }
+    width: 100%;
+    z-index: 100; }
   #content p {
     text-align: justify; }
   #content > div, #content > section {
@@ -1983,28 +1984,28 @@ body {
     #content > div h2:before, #content > section h2:before {
       content: '';
       display: block;
-      height: 3em;
-      margin: -3em 0 0; }
+      height: 3.5em;
+      margin: -3.5em 0 0; }
     #content > div h3:before, #content > section h3:before {
       content: '';
       display: block;
-      height: 3.6em;
-      margin: -3.6em 0 0; }
+      height: 4em;
+      margin: -4em 0 0; }
     #content > div h4:before, #content > section h4:before {
       content: '';
       display: block;
-      height: 4.2em;
-      margin: -4.2em 0 0; }
+      height: 4.7em;
+      margin: -4.7em 0 0; }
     #content > div h5:before, #content > section h5:before {
       content: '';
       display: block;
-      height: 5.2em;
-      margin: -5.2em 0 0; }
+      height: 5.6em;
+      margin: -5.6em 0 0; }
     #content > div h6:before, #content > section h6:before {
       content: '';
       display: block;
-      height: 6.2em;
-      margin: -6.2em 0 0; }
+      height: 7em;
+      margin: -7em 0 0; }
   #content > div[id*=outline-container-sec]:last-child, #content > section[id*=outline-container-sec]:last-child {
     clear: both;
     margin-bottom: 5.2em;
@@ -2013,13 +2014,22 @@ body {
 nav#table-of-contents {
   float: left;
   width: 30%;
-  margin: 0em 0.5% 0em -2em;
-  position: fixed; }
+  margin: 0.8em 0.5% 0em -2em;
+  position: fixed;
+  overflow-y: auto;
+  height: 100%; }
+  nav#table-of-contents h2 {
+    position: fixed;
+    width: 30.2%;
+    background: #F5F5F5;
+    margin-top: -0.05em;
+    padding: 0.8em 0em 0.4em 0em; }
   nav#table-of-contents + div, nav#table-of-contents + section {
-    margin-top: -5.2em;
-    margin-top: 0em; }
+    margin-top: 0.8em; }
   nav#table-of-contents #text-table-of-contents ul:first-child {
-    margin-left: -1em; }
+    margin-left: -1em;
+    margin-top: 5em;
+    padding-bottom: 35%; }
   nav#table-of-contents #text-table-of-contents ul li {
     margin-left: -2em; }
     nav#table-of-contents #text-table-of-contents ul li a {
