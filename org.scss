@@ -50,6 +50,9 @@ $color_background: #ffffff;
 $color_foreground: #000000;
 $color_border: #aaaaaa;
 
+$color_preamble_background: $color_body_background;
+$color_preamble_foreground: $color_foreground;
+
 $color_postamble_background: $color_body_background;
 $color_postamble_foreground: $color_foreground;
 
@@ -308,7 +311,6 @@ $lheight: 1.4em;
     $lheight: $lheight - 0.1em;
     @if $i == 6 {$lheight: $lheight + 0.2em;}
 }
-
 
 h1.title {
     background: $color_title_background none repeat scroll 0 0;
@@ -1440,6 +1442,40 @@ $size: 172%;
     font-weight: bold;
 }
 
+div#preamble {
+    background-color: $color_preamble_background;
+    color: $color_preamble_foreground;
+    font-size: 80%;
+    margin: 0.4em 0em 0.4em 0em;
+    padding: 0.4em;
+    text-align: left;
+
+    * {font-size: inherit;}
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    .date {}
+    .author {
+        font-weight: 500;
+    }
+    .creator {
+        font-style: italic;
+    }
+    .validation {}
+
+    a {
+        background-color: $color_preamble_background;
+        color: $color_preamble_foreground;
+        font-style: italic;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+}
 
 div#postamble {
     background-color: $color_postamble_background;
@@ -1568,7 +1604,6 @@ span.underline {
 }
 
 /* FLOATING INDEX */
-
-@import "left-topic-index";
+@import "_left-topic-index-postable-fixed";
 
 

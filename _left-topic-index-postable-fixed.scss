@@ -1,6 +1,13 @@
-body {
-    margin-top: 0em;
-}
+
+$toc_bottom_padding: 40%;
+
+$height_title: 1.4em; //4%;
+$height_title_perc: 4%;
+$height_postamble: 2%;
+$height_toc_title: 4%;
+$height_patch: 10%;
+$height_toc: 100% - $height_title_perc - $height_postamble;
+$height_toc_internal: $height_toc - $height_postamble - $height_toc_title - $height_patch; //4.5%;
 
 #content {
     border: none !important;
@@ -12,6 +19,7 @@ body {
 	left: 0em;
 	padding-top: 1.5em;
 	width: 100%;
+	height: $height_title;
 	z-index: 100;
     }
 
@@ -24,7 +32,7 @@ body {
 	width: 69%;
 	margin-left: 31%;
 	padding-left: 1em;
-	border-left: 1px solid $color_border;
+	//border-left: 1px solid $color_border;
 	h2:before {
 	    content: '';
 	    display:block;
@@ -68,28 +76,32 @@ body {
 nav#table-of-contents {
     float: left;
     width: 30%;
+    height: $height_toc;
     margin: 0.8em 0.5% 0em -2em;
-    position: fixed;
-    overflow-y: auto;
-    height: 100%;
     
     h2 {
 	position: fixed;
 	width: 30.2%;
+	height: $height_toc_title;
 	background: $color_body_background;
-	margin-top: -0.05em;
-	padding: 0.8em 0em 0.4em 0em;
+	margin: 0% 0em 0em -1.3em;
+	padding: 0.8em 0em 0.4em 1.2em;
+	z-index: 10;
     }
 
     & + div, & + section {
 	margin-top: 0.8em;
     }
 
-    #text-table-of-contents {
+    #text-table-of-contents {	
+	position: fixed;
+	overflow-y: auto;
+	max-height: $height_toc_internal;
+	width: 30%;
+	margin: 4.3em 0em 0em -0.1em;
+	margin: 6% 0em 0em -0.1em;
 	ul:first-child {
-	    margin-left: -1em;
-	    margin-top: 5em;
-	    padding-bottom: 35%;
+	    margin: 0em 0em 0em -1em;
 	}	
 	ul li {	
 	    margin-left: -2em;
@@ -100,11 +112,47 @@ nav#table-of-contents {
     }
 }
 
+#preamble {
+    position: fixed;
+    top: 4em;
+    left: 2em;
+    background-color: transparent !important;
+    z-index: 1000;
+
+    p {
+	display: inline;
+	color: invert($color_preamble_foreground);
+	a {
+	    color: invert($color_preamble_foreground);
+	    background-color: transparent !important;
+	}
+    }
+
+    p:after {content: ' - ';}
+    p:last-child:after { content: ''}
+
+}
+
 #postamble {
     clear: both;
     border-top: 1px solid $color_border;
     position: fixed;
     bottom: -0.4em;
     width: 100%;
+    height: $height_postamble;
+    min-height: $height_postamble;
     background: transparent;
+
+    p {
+	display: inline;
+	color: $color_postamble_foreground;
+	a {
+	    color: $color_postamble_foreground;
+	    background-color: transparent !important;
+	}
+    }
+
+    p:after {content: ' - ';}
+    p:last-child:after { content: ''}
+
 }
