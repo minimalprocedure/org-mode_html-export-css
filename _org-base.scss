@@ -66,7 +66,7 @@ $color_table_foreground_header: #000000;
 $color_table_border: #777777;
 
 $color_link: #113399;
-$color_link_background: $color_background;
+$color_link_background: transparent; //$color_background;
 $color_link_hover: #990000;
 $color_link_active: #990000;
 $color_link_visited: $color_link;

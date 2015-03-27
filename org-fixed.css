@@ -1,3 +1,26 @@
+/*******************************************************************************
+
+Copyright (c) 2015 Massimo Maria Ghisalberti <massimo.ghisalberti@gmail.com>  
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*******************************************************************************/
 /**************************************************************************************** 
   ORG CSS CLASS
 *****************************************************************************************
@@ -37,7 +60,7 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 /*#336699;*/
 /* Normalize.css - BEGIN: https://necolas.github.io/normalize.css/ */
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.2 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -487,7 +510,7 @@ p {
 
 a {
   color: #113399;
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 1px;
   text-decoration: none; }
   a:hover {
@@ -502,7 +525,7 @@ div#content {
   padding: 2em; }
 
 div#org-div-home-and-up {
-  background-color: #ffffff;
+  background-color: transparent;
   color: #113399; }
   div#org-div-home-and-up a:hover {
     color: #990000; }
@@ -2026,6 +2049,29 @@ span.underline {
 
 /* FLOATING INDEX */
 /* FLOATING INDEX */
+/*******************************************************************************
+
+Copyright (c) 2015 Massimo Maria Ghisalberti <massimo.ghisalberti@gmail.com>  
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*******************************************************************************/
 #content {
   border: none !important;
   background: #F5F5F5 !important; }
