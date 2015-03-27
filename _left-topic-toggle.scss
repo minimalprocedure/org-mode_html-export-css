@@ -1,4 +1,26 @@
+/*******************************************************************************
 
+Copyright (c) 2015 Massimo Maria Ghisalberti <massimo.ghisalberti@gmail.com>  
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*******************************************************************************/
 $toc_bottom_padding: 40%;
 
 $height_title: 1.4em; //4%;
@@ -11,7 +33,7 @@ $height_toc_internal: $height_toc - $height_postamble - $height_toc_title - $hei
 
 $color_sidebar_foreground: #ffffff;
 $color_sidebar_background: #505050;
-//$sidebar_width: 42%; 
+
 $sidebar_width: 32%;
 $sidebar_padding: 4.5%;
 $sidebar_translation: $sidebar_width * 2.5;
@@ -33,6 +55,7 @@ $transition: transform 0.3s ease-in-out 0s;
 	width: 100%;
 	height: $height_title;
 	z-index: 100;
+	white-space: nowrap;
     }
 
     p {
@@ -88,16 +111,12 @@ $transition: transform 0.3s ease-in-out 0s;
 
 #sidebar-checkbox:checked {
     & ~ section {
-	width: 100% - $sidebar_width; //$sidebar_translation - $sidebar_width;
-	//margin-left: $sidebar_padding;
-	transform: translateX(49%); //translateX($sidebar_translation);
+	width: 100% - $sidebar_width;
+	transform: translateX(49%);
     }
 
     & ~ nav#table-of-contents {
-	//transform: translateX($sidebar_translation + 2);
 	transform: translateX(100%);
-	//left: $sidebar_width / 2;
-	//margin-left: 0em;
 	h2 {
 	    width: 90%;
 	}
@@ -121,7 +140,7 @@ $transition: transform 0.3s ease-in-out 0s;
     width: 1rem;
     height: 1rem;
     color: #505050;
-    background-color: transparent; //$color_sidebar_background;
+    background-color: transparent;
     border-radius: 4px;
     cursor: pointer;
     padding: 0.5rem 0.65rem;
@@ -146,11 +165,8 @@ nav#table-of-contents {
     position: fixed;
     left: -$sidebar_width;
     width: $sidebar_width;
-    //height: $height_toc;
     top: $height_title + 2.8;
-    bottom: -1rem;
-     //padding-left: $sidebar_padding;
-    //margin-left: -$sidebar_padding; //-4.8%;
+    bottom: $height_postamble - 1;
     margin-left: -1.2%;
     padding-left: 1%;
     color: $color_sidebar_foreground !important;
@@ -158,7 +174,6 @@ nav#table-of-contents {
     transition: $transition;
     backface-visibility: hidden;
     overflow-y: auto;
-    //z-index: 500;
 
     * {
 	color: $color_sidebar_foreground !important;
@@ -176,20 +191,13 @@ nav#table-of-contents {
 
     #text-table-of-contents {
 	width: $sidebar_width;
+	//margin: 5em 0em 0em -1.2em;
 	ul {
-	    //&:first-child {
-		li {
-		    margin: 0.2em 0em 0.2em -1.8em;
-		    a {
-			//font-weight: bold;
-			//font-size: 0.9em;
-			* {
-			//font-weight: bold;
-			//font-size: 1em;
-			}
-		    }
+	    li {
+		margin: 0.2em 0em 0.2em -1.8em;
+		a {
 		}
-	    //}
+	    }
 	}
     }
 }
@@ -197,9 +205,15 @@ nav#table-of-contents {
 #preamble {
     position: fixed;
     top: 4em;
-    left: 2em;
+    left: 0rem;
+    right: 0rem;
     background-color: transparent !important;
     z-index: 1000;
+    white-space: nowrap;
+    
+    & p:first-child {
+	padding-left: 1em;
+    }
 
     p {
 	display: inline;
@@ -216,17 +230,23 @@ nav#table-of-contents {
 }
 
 #postamble {
-    display: none; //hidden postamble
+    //display: none; //hidden postamble
     clear: both;
     border-top: 1px solid $color_border;
     position: fixed;
+    left: 0rem;
+    right: 0rem;
     bottom: -0.4em;
-    width: 100%;
     height: $height_postamble;
     min-height: $height_postamble;
     background: transparent;
-
-    p {
+    white-space: nowrap;
+    
+    & p:first-child {
+	padding-left: 1em;
+    }
+    
+    p {	
 	display: inline;
 	color: $color_postamble_foreground;
 	a {
