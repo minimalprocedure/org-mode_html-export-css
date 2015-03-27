@@ -1,0 +1,1346 @@
+/**************************************************************************************** 
+  ORG CSS CLASS
+*****************************************************************************************
+
+     p.author            author information, including email
+     p.date              publishing date
+     p.creator           creator info, about org mode version
+     .title              document title
+     .todo               TODO keywords, all not-done states
+     .done               the DONE keywords, all states that count as done
+     .WAITING            each TODO keyword also uses a class named after itself
+     .timestamp          timestamp
+     .timestamp-kwd      keyword associated with a timestamp, like SCHEDULED
+     .timestamp-wrapper  span around keyword plus timestamp
+     .tag                tag in a headline
+     ._HOME              each tag uses itself as a class, "@" replaced by "_"
+     .target             target for links
+     .linenr             the line number in a code example
+     .code-highlighted   for highlighting referenced code lines
+     div.outline-N       div for outline level N (headline plus text))
+     div.outline-text-N  extra div for text at outline level N
+     .section-number-N   section number in headlines, different for each level
+     .figure-number      label like "Figure 1:"
+     .table-number       label like "Table 1:"
+     .listing-number     label like "Listing 1:"
+     div.figure          how to format an inlined image
+     pre.src             formatted source code
+     pre.example         normal example
+     p.verse             verse paragraph
+     div.footnotes       footnote section headline
+     p.footnote          footnote definition paragraph, containing a footnote
+     .footref            a footnote reference number (always a <sup>)
+     .footnum            footnote number in footnote definition (always <sup>)
+
+
+*******************************************************************************************/
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+	    
+$font_normal: Ubuntu, "DejaVu Sans", Arial, sans-serif;
+$font_monospace: "Ubuntu Mono", "DejaVu Sans Mono", monospace;
+$font_size_base: 10.5pt;
+$font_size_mono: 10.5pt;
+
+$list_bullet_toc:  "";
+$list_bullet: "";
+
+$color_body_background: #F5F5F5;
+$color_background: #ffffff;
+$color_foreground: #000000;
+$color_border: #aaaaaa;
+
+$color_preamble_background: $color_body_background;
+$color_preamble_foreground: $color_foreground;
+
+$color_postamble_background: $color_body_background;
+$color_postamble_foreground: $color_foreground;
+
+$color_title_background: #2D2D2D; /*#336699;*/
+$color_title_foreground: #ffffff;
+
+$color_table_background: $color_background;
+$color_table_foreground: $color_foreground;
+$color_table_background_header: #eeeeee;
+$color_table_foreground_header: #000000;
+$color_table_border: #777777;
+
+$color_link: #113399;
+$color_link_background: $color_background;
+$color_link_hover: #990000;
+$color_link_active: #990000;
+$color_link_visited: $color_link;
+
+$color_link_toc: #113399;
+$color_link_toc_background: $color_background;
+$color_link_toc_hover: #990000;
+$color_link_toc_active: #990000;
+$color_link_toc_visited: $color_link;
+
+$color_code_background: #F5F5F5;
+$color_code_foreground: #000000;
+$style_code: normal;
+$weight_code: normal;
+$color_code_border: #AEBDCC;
+$decoration_code: none;
+
+$color_default_background: $color_code_background;
+$color_default_foreground: $color_code_foreground;
+$style_default: $style_code;
+$weight_default: $weight_code;
+$decoration_default: $decoration_code;
+
+$color_keyword_background: $color_code_background;
+$color_keyword_foreground: #a020f0;
+$style_keyword: normal;
+$weight_keyword: bold;
+$decoration_keyword: none;
+
+$color_comment_background: $color_code_background;
+$color_comment_foreground: #b22222;
+$style_comment: italic;
+$weight_comment: normal;
+$decoration_comment: none;
+
+$color_comment_delimiter_background: $color_code_background;
+$color_comment_delimiter_foreground: #b22222;
+$style_comment_delimiter: italic;
+$weight_comment_delimiter: normal;
+$decoration_comment_delimiter: none;
+
+$color_builtin_background: $color_code_background;
+$color_builtin_foreground: #C05A06;
+$style_builtin: normal;
+$weight_builtin: bold;
+$decoration_builtin: none;
+
+$color_string_background: $color_code_background;
+$color_string_foreground: #2F72C2;
+$style_string: normal;
+$weight_string: normal;
+$decoration_string: none;
+
+$color_constant_background: $color_code_background;
+$color_constant_foreground: #5f9ea0;
+$style_constant: normal;
+$weight_constant: normal;
+$decoration_constant: none;
+
+$color_type_background: $color_code_background;
+$color_type_foreground: #228b22;
+$style_type: normal;
+$weight_type: normal;
+$decoration_type: underline;
+
+$color_variable_name_background: $color_code_background;
+$color_variable_name_foreground: #CE0092;
+$style_variable_name: oblique;
+$weight_variable_name: normal;
+$decoration_variable_name: none;
+
+$color_function_name_background: $color_code_background;
+$color_function_name_foreground: #0000ff;
+$style_function_name: normal;
+$weight_function_name: normal;
+$decoration_function_name: none;
+
+$color_sh_quoted_exec_background: $color_code_background;
+$color_sh_quoted_exec_foreground: #a020f0;
+$style_sh_quoted_exec: normal;
+$weight_sh_quoted_exec: bold;
+$decoration_sh_quoted_exec: none;
+
+$color_sh_background: $color_code_background !important;
+$color_sh_foreground: #1c1c1c !important;
+$style_sh: normal !important;
+$weight_sh: normal !important;
+$decoration_sh: none !important;
+
+$color_org_border: #000000;
+$color_org_diary_foreground: #ff0000;
+$color_org_doc_foreground: #bc8f8f;
+$color_org_escape_foreground: #a52a2a;
+$color_org_file_name_shadow_foreground: #7f7f7f;
+$color_org_fringe_foreground: #000000; 
+$color_org_fringe_background: #f2f2f2; 
+$color_org_header_line_foreground: #333333;
+$color_org_header_line_background: #e5e5e5; 
+$color_org_highlight_foreground: #b4eeb4;
+$color_org_holiday_foreground: #ffc0cb;
+$color_org_info_header_node_foreground: #a52a2a;
+$color_org_info_header_xref_foreground: #0000ff;
+$color_org_info_menu_star_foreground: #ff0000;
+$color_org_info_node_foreground: #a52a2a;
+$color_org_isearch_foreground: #b0e2ff;
+$color_org_isearch_backround: #cd00cd;
+$color_org_lazy_highlight_foreground: #afeeee;
+$color_org_link: #113399;
+$color_org_link_background: $color_background;
+$color_org_link_hover: #990000;
+$color_org_link_visited: $color_org_link;
+$color_org_match_background: #ffff00;
+$color_org_message_cited_text_foreground: #ff0000;
+$color_org_message_header_cc_foreground: #191970;
+$color_org_message_header_name_foreground: #6495ed;
+$color_org_message_header_newsgroups_foreground: #00008b;
+$color_org_message_header_other_foreground: #4682b4;
+$color_org_message_header_subject_foreground: #000080;
+$color_org_message_header_to_foreground: #191970;
+$color_org_message_header_xheader_foreground: #0000ff;
+$color_org_message_header_mml_foreground: #228b22;
+$color_org_message_separator_foreground: #a52a2a;
+$color_org_minibuffer_prompt_foreground: #0000cd;
+$color_org_mm_u_extract_foreground: #006400;
+$color_org_mm_u_extract_background: #ffffe0; 
+$color_org_modeline_foreground: #000000;
+$color_org_modeline_background: #bfbfbf;
+$color_org_modeline_inactive_foreground: #333333;
+$color_org_modeline_inactive_background: #e5e5e5;
+$color_org_mouse_background: #000000;
+$color_org_cursor_background: #000000;
+$color_org_next_error_background: #eedc82;
+$color_org_nobreak_space_foreground: #a52a2a;
+$color_org_agenda_date_foreground: #0000ff;
+$color_org_agenda_date_weekend_foreground: #0000ff;
+$color_org_agenda_restriction_lock_background: #ffff00;
+$color_org_agenda_structure_foreground: #0000ff;
+$color_org_archived_foreground: #7f7f7f;
+$color_org_org_code_foreground: #7f7f7f;
+$color_org_org_column_background: #e5e5e5;
+$color_org_org_column_title_background: #e5e5e5;
+$color_org_org_date_foreground: #a020f0;
+$color_org_org_done_foreground: #228b22;
+$color_org_org_drawer_foreground: #0000ff;
+$color_org_org_ellipsis_foreground: #b8860b;
+$color_org_org_formula_foreground: #b22222;
+$color_org_org_headline_done_foreground: #e5e5e5;
+$color_org_org_hide_foreground: #e5e5e5;
+$color_org_latex_and_export_specials_foreground: #8b4513;
+$color_org_level_1_foreground: #0000ff;
+$color_org_level_2_foreground: #b8860b;
+$color_org_level_3_foreground: #a020f0;
+$color_org_level_4_foreground: #b22222;
+$color_org_level_5_foreground: #228b22;
+$color_org_level_6_foreground: #5f9ea0;
+$color_org_level_7_foreground: #da70d6;
+$color_org_level_8_foreground: #bc8f8f;
+$color_org_scheduled_previously_foreground: #b22222;
+$color_org_scheduled_today_foreground: #006400;
+$color_org_sexp_date_foreground: #a020f0;
+$color_org_sexp_date_foreground: #bc8f8f;
+$color_org_org_table_foreground: #0000ff;
+$color_org_org_time_grid_table_foreground: #0000ff;
+$color_org_org_todo_foreground: #ff0000;
+$color_org_org_upcoming_deadline_foreground: #b22222;
+$color_org_org_verbatim_foreground: #7f7f7f;
+$color_org_org_warning_foreground: #ff0000;
+$color_org_outline_1_foreground: #0000ff;
+$color_org_outline_2_foreground: #b8860b;
+$color_org_outline_3_foreground: #a020f0;
+$color_org_outline_4_foreground: #b22222;
+$color_org_outline_5_foreground: #228b22;
+$color_org_outline_6_foreground: #5f9ea0;
+$color_org_outline_7_foreground: #da70d6;
+$color_org_outline_8_foreground: #bc8f8f;
+$color_org_preprocessor_foreground: #da70d6;
+$color_org_query_replace_foreground: #b0e2ff;
+$color_org_query_replace_background: #cd00cd;
+$color_org_region_foreground: #eedc82;
+$color_org_scroll_bar_background: #bfbfbf;
+$color_org_secondary_selection_background: #ffff00;
+$color_org_shadow_foreground: #7f7f7f;
+$color_org_show_paren_match_background: #40e0d0;
+$color_org_show_paren_mismatch_foreground: #ffffff;
+$color_org_show_paren_mismatch_background: #a020f0;
+$color_org_texinfo_heading_foreground: #0000ff;
+$color_org_tool_bar_foreground: #000000;
+$color_org_tool_bar_background: #bfbfbf;
+$color_org_tooltip_foreground: #000000;
+$color_org_tooltip_background: #bfbfbf;
+$color_org_trailing_whitespace_background: #ff0000;
+$color_org_warning_foreground: #ff0000;
+$color_org_sidebar_foreground: #ffffff;
+$color_org_sidebar_background: #a02f6c;
+$color_fixme_background: #FFFF66;
+$color_timestamp_kwd_foreground: #f59ea0;
+$color_tag_foreground: #add8e6;
+$color_target_foreground: #551a8b;
+
+
+@mixin background_opaque_15 {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.15) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.15)), color-stop(100%,rgba(0,0,0,0.15))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.15) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.15) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.15) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.15) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=0 ); /* IE6-9 */
+}
+
+/* Normalize.css - BEGIN: https://necolas.github.io/normalize.css/ */
+@import "normalize";
+
+/* Normalize.css - END */
+
+* {
+    font-family: $font_normal;
+    font-size: $font_size_base;
+}
+
+body {
+    background: $color_body_background none repeat scroll 0 0;
+    color: $color_foreground;
+    margin: 0;
+    padding: 2em;
+}
+
+/************************************************************************************
+* main headings
+************************************************************************************/
+$i: 1;
+$size: 200%;
+$lheight: 1.4em;
+@while $i <= 6 {
+    h#{$i} {
+       font-size: $size;
+       font-weight: 700;
+       margin-bottom: $lheight;
+    }
+    $size: $size - 20;
+    $i: $i + 1;
+    $lheight: $lheight - 0.1em;
+    @if $i == 6 {$lheight: $lheight + 0.2em;}
+}
+
+h1.title {
+    background: $color_title_background none repeat scroll 0 0;
+    color: $color_title_foreground;
+    font-weight: 700;
+    letter-spacing: .1em;
+    margin: -1em -1em .2em;
+    padding: .75em 1em;
+}
+/************************************************************************************/
+
+/************************************************************************************
+* outline headings
+************************************************************************************/
+$i: 1;
+$size: 200%;
+@while $i <= 6 {    
+    .outline-#{$i} {    
+      h#{$i} {
+        font-size: $size;
+        * {font-size: inherit;}
+      }
+    }
+    $size: $size - 20;
+    $i: $i + 1;
+}
+/************************************************************************************/
+
+p {
+    margin: 0em 0em 0.4em 0em;
+}
+
+
+a {
+    color: $color_link;
+    background-color: $color_link_background;
+    padding: 1px;
+    text-decoration: none;
+
+    &:hover {
+        color: $color_link_hover;
+    }
+    &:visited {
+        color: $color_link_visited;
+    }
+}
+
+div#content {
+    border: 1px solid $color_border;
+    background: $color_background;
+    margin: 0;
+    padding: 2em;
+}
+
+div#org-div-home-and-up {
+    
+    background-color: $color_link_background;
+    color: $color_link;
+    
+    & a:hover {
+        color: $color_link_hover;
+    }
+
+    & a:link,
+    & a:visited {
+        color: $color_link_visited;
+    }   
+}
+
+#table-of-contents {
+    margin: 1em 0;
+    padding: 0.1em;
+    #text-table-of-contents {
+	margin-top: 0em;
+	ul {
+            list-style: none;
+            li {
+		margin: 0.2em 0em 0.2em -0.4em;
+		a {
+		    color: $color_link_toc;
+		    background-color: $color_link_toc_background;
+		    padding: 1px;
+		    text-decoration: none;
+
+		    &:active {
+			color: $color_link_toc_active;
+		    }
+
+		    &:hover {
+			color: $color_link_toc_hover;
+		    }
+		    &:visited {
+			color: $color_link_toc_visited;
+		    }
+		}
+            }
+            li:before {
+		font-weight: 700;
+		content: $list_bullet_toc;
+            }
+	}
+    }
+}
+
+.org-ul {    
+    margin: 1em 0em 1em 1.4em;
+    padding: .1em;
+    list-style: none;
+    li {
+        margin: 0.2em 0em 0em 0em;
+        /* font-size: 98%;
+        * {font-size: 98%;} */
+        b:first-child {margin: 0em 0.6em 0em 0.6em;}
+    }
+    li:before {
+        font-weight: 700;
+        content: $list_bullet;
+    }
+}
+
+div.title {
+    margin: -1em -1em 0;
+    font-size: 200%;
+    font-weight: bold;
+    background: $color_title_background;
+    color: $color_title_foreground;
+    padding: .75em 1em;
+    font-family: "BitStream Vera Sans", Verdana;
+    letter-spacing: .1em;
+}
+
+.verbatim {
+    margin: .5em 0;
+    pre {
+        margin: 0;
+    }
+}
+
+.verbatim-caption {
+    border: 1px solid #cccccc;
+    border-bottom: 0;
+    background: #ffffff;
+    display: block;
+    font-size: 80%;
+    padding: .2em;
+}
+
+/* Source code formatting */
+tt,
+code {
+    color: $color_code_foreground;
+    font-style: $style_code;
+    font-weight: $weight_code;
+    text-decoration: $decoration_code;
+    font-family: $font_monospace;
+    font-size: $font_size_mono;
+    padding: 0em 1pt 0em 1pt;
+    * {
+        font-family: $font_monospace;
+        font-size: $font_size_mono;
+    }
+}
+
+tt {
+    color: #0000FF;
+}
+
+pre,
+pre.src {
+    background-color : $color_code_background;
+    color: $color_code_foreground;
+    font-style: $style_code;
+    font-weight: $weight_code;
+    text-decoration: $decoration_code;
+    border: 1pt solid $color_code_border;
+    font-family: $font_monospace;
+    font-size: $font_size_mono;
+    overflow: auto;
+    padding: 5pt;
+    * {
+        font-family: $font_monospace;
+        font-size: $font_size_mono;
+    }
+}
+
+/* code block custom title **************************/
+@each $language in awk,
+C,
+clojure,
+ditaa,
+D,
+emacs-lisp,
+haskell,
+latex,
+lisp,
+matlab,
+ocaml,
+org,
+perl,
+python,
+ruby,
+scheme,
+sh,
+sqlite,
+asymptote,
+calc,
+Cpp,
+css,
+dot,
+gnuplot,
+java,
+js,
+julia,
+ledger,
+lilypond,
+mscgen,
+octave,
+oz,
+plantuml,
+R,
+sass,
+screen,
+sql {
+
+    @if $language == sh {
+	pre.src-sh {
+	    background-color: $color_sh_background;
+	    color: $color_sh_foreground;
+	    font-style: $style_sh;
+	    font-weight: $weight_sh;
+	    text-decoration: $decoration_sh;
+	    * {
+		background-color: $color_sh_background;
+		color: $color_sh_foreground;
+		font-style: $style_sh;
+		font-weight: $weight_sh;
+		text-decoration: $decoration_sh;
+	    }
+	}
+    }
+    
+    pre.src-#{to-lower-case($language)}:before {
+	content: "#{$language} source.";
+	display: block;
+	padding: 0.6em 1em 0.4em 1em;
+	margin: -1em -0.6em 1em -0.6em;
+	font-size: 80%;
+	text-align: right;
+	@include background_opaque_15;
+    }
+}
+
+/***********************************************/
+
+.org-info-search-highlight
+{
+    background-color:#adefef; /* same color as emacs default */
+    color:#000000;
+    font-weight:bold;
+}
+
+.org-bbdb-company {
+    font-style: italic;
+}
+
+.org-bbdb-field-name {
+}
+
+.org-bbdb-field-value {
+}
+
+.org-bbdb-name {
+    text-decoration: underline;
+}
+
+.org-bold {
+    font-weight: bold;
+}
+
+.org-bold-italic {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.org-border {
+    background-color: $color_org_border;
+}
+
+.org-buffer-menu-buffer {
+    font-weight: bold;
+}
+
+.org-builtin {
+    background-color : $color_builtin_background;
+    color: $color_builtin_foreground;
+    font-style: $style_builtin;
+    font-weight: $weight_builtin;
+    text-decoration: $decoration_builtin;
+}
+
+.org-button {
+    text-decoration: underline;
+}
+
+.org-c-nonbreakable-space {
+    background-color: #ff0000;
+    font-weight: 700;
+}
+
+.org-calendar-today {
+    /* calendar-today */
+    text-decoration: underline;
+}
+
+.org-comment {
+    background-color : $color_comment_background;
+    color: $color_comment_foreground;
+    font-style: $style_comment;
+    font-weight: $weight_comment;
+    text-decoration: $decoration_comment;
+}
+
+.org-comment-delimiter {
+    background-color : $color_comment_delimiter_background;
+    color: $color_comment_delimiter_foreground;
+    font-style: $style_comment_delimiter;
+    font-weight: $weight_comment_delimiter;
+    text-decoration: $decoration_comment_delimiter;
+}
+
+.org-constant {
+    background-color : $color_constant_background;
+    color: $color_constant_foreground;
+    font-style: $style_constant;
+    font-weight: $weight_constant;
+    text-decoration: $decoration_constant;
+}
+
+.org-cursor {
+    background-color: $color_org_cursor_background;
+}
+
+.org-default {
+    background-color : $color_default_background;
+    color: $color_default_foreground;
+    font-style: $style_default;
+    font-weight: $weight_default;    
+}
+
+.org-diary {
+    color: $color_org_diary_foreground;
+}
+
+.org-doc {
+    color: $color_org_doc_foreground;
+}
+
+.org-escape-glyph {
+    color: $color_org_escape_foreground;
+}
+
+.org-file-name-shadow {
+    color: $color_org_file_name_shadow_foreground;
+}
+
+.org-fixed-pitch {
+}
+
+.org-fringe {
+    color: $color_org_fringe_foreground;
+    background-color: $color_org_fringe_background;
+}
+
+.org-function-name {
+    background-color : $color_function_name_background;
+    color: $color_function_name_foreground;
+    font-style: $style_function_name;
+    font-weight: $weight_function_name;
+    text-decoration: $decoration_function_name;
+}
+
+.org-header-line {
+    color: $color_org_header_line_foreground;
+    background-color: $color_org_header_line_background;
+}
+
+.org-help-argument-name {
+    font-style: italic;
+}
+
+.org-highlight {
+    background-color: $color_org_highlight_foreground;
+}
+
+.org-holiday {
+    background-color: $color_org_holiday_foreground;
+}
+
+.org-info-header-node {
+    color: $color_org_info_header_node_foreground;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.org-info-header-xref {
+    color: $color_org_info_header_xref_foreground;
+    text-decoration: underline;
+}
+
+.org-info-menu-header {
+    font-weight: bold;
+}
+
+.org-info-menu-star {
+    color: $color_org_info_menu_star_foreground;
+}
+
+.org-info-node {
+    color: $color_org_info_node_foreground;
+    font-weight: bold;
+    font-style: italic;
+}
+
+$i: 1;
+$size: 172%;
+@while $i <= 6 {
+    .org-info-title-#{$i} {
+       font-size: $size;
+       font-weight: 700;
+    }
+    $size: $size - 28;
+    $i: $i + 1;
+}
+
+.org-info-xref {
+    color: $color_org_info_header_xref_foreground;
+    text-decoration: underline;
+}
+
+.org-isearch {
+    color: $color_org_isearch_foreground;
+    background-color: $color_org_isearch_backround;
+}
+
+.org-italic {
+    font-style: italic;
+}
+
+.org-keyword {
+    background-color : $color_keyword_background;
+    color: $color_keyword_foreground;
+    font-style: $style_keyword;
+    font-weight: $weight_keyword;
+    text-decoration: $decoration_keyword;
+}
+
+.org-lazy-highlight {
+    background-color: $color_org_lazy_highlight_foreground;
+}
+
+.org-link {
+    color: $color_org_link;
+    text-decoration: underline;
+}
+
+.org-link-visited {
+    color: $color_org_link_visited;
+    text-decoration: underline;
+}
+
+.org-match {
+    background-color: $color_org_match_background;
+}
+
+.org-menu {
+}
+
+.org-message-cited-text {
+    color: $color_org_message_cited_text_foreground;
+}
+
+.org-message-header-cc {
+    color: $color_org_message_header_cc_foreground;
+}
+
+.org-message-header-name {
+    color: $color_org_message_header_name_foreground;
+}
+
+.org-message-header-newsgroups {
+    color: $color_org_message_header_newsgroups_foreground;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.org-message-header-other {
+    color: $color_org_message_header_other_foreground;
+}
+
+.org-message-header-subject {
+    color: $color_org_message_header_subject_foreground;
+    font-weight: bold;
+}
+
+.org-message-header-to {
+    color: $color_org_message_header_to_foreground;
+    font-weight: bold;
+}
+
+.org-message-header-xheader {
+    color: $color_org_message_header_xheader_foreground;
+}
+
+.org-message-mml {
+    color: $color_org_message_header_mml_foreground;
+}
+
+.org-message-separator {
+    color: $color_org_message_separator_foreground;
+}
+
+.org-minibuffer-prompt {
+    color: $color_org_minibuffer_prompt_foreground;
+}
+
+.org-mm-uu-extract {
+    color: $color_org_mm_u_extract_foreground;
+    background-color: $color_org_mm_u_extract_background;
+}
+
+.org-mode-line {
+    color: $color_org_modeline_foreground;
+    background-color: $color_org_modeline_background;
+}
+
+.org-mode-line-buffer-id {
+    font-weight: bold;
+}
+
+.org-mode-line-highlight {
+}
+
+.org-mode-line-inactive {
+    color: $color_org_modeline_inactive_foreground;
+    background-color: $color_org_modeline_inactive_background;
+}
+
+.org-mouse {
+    background-color:$color_org_mouse_background;
+}
+
+.org-negation-char {
+}
+
+.org-next-error {
+    background-color: $color_org_next_error_background;
+}
+
+.org-nobreak-space {
+    color: $color_org_nobreak_space_foreground;
+    text-decoration: underline;
+}
+
+.org-org-agenda-date {
+    color: $color_org_agenda_date_foreground;
+}
+
+.org-org-agenda-date-weekend {
+    color: $color_org_agenda_date_weekend_foreground;
+    font-weight: bold;
+}
+
+.org-org-agenda-restriction-lock {
+    background-color: $color_org_agenda_restriction_lock_background;
+}
+
+.org-org-agenda-structure {
+    color: $color_org_agenda_structure_foreground;
+}
+
+.org-org-archived {
+    color: $color_org_archived_foreground;
+}
+
+.org-org-code {
+    color: $color_org_org_code_foreground
+}
+
+.org-org-column {
+    background-color: $color_org_org_column_background;
+}
+
+.org-org-column-title {
+    background-color: $color_org_org_column_title_background;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.org-org-date {
+    color: $color_org_org_date_foreground;
+    text-decoration: underline;
+}
+
+.org-org-done {
+    color: $color_org_org_done_foreground;
+    font-weight: bold;
+}
+.org-org-drawer {
+    color: $color_org_org_drawer_foreground;
+}
+.org-org-ellipsis {
+    color: $color_org_org_ellipsis_foreground;
+    text-decoration: underline;
+}
+.org-org-formula {
+    color: $color_org_org_formula_foreground;
+}
+
+.org-org-headline-done {
+    color: $color_org_org_headline_done_foreground;
+}
+
+.org-org-hide {
+    color: $color_org_org_hide_foreground;
+}
+
+.org-org-latex-and-export-specials {
+    color: $color_org_latex_and_export_specials_foreground;
+}
+
+.org-org-level-1 {
+    color: $color_org_level_1_foreground;
+}
+
+.org-org-level-2 {
+    color: $color_org_level_2_foreground;
+}
+
+.org-org-level-3 {
+    color: $color_org_level_3_foreground;
+}
+.org-org-level-4 {
+    color: $color_org_level_4_foreground;
+}
+
+.org-org-level-5 {
+    color: $color_org_level_5_foreground;
+}
+
+.org-org-level-6 {
+    color: $color_org_level_6_foreground;
+}
+
+.org-org-level-7 {
+    /* org-level-7 */
+    color: $color_org_level_7_foreground;
+}
+
+.org-org-level-8 {
+    /* org-level-8 */
+    color: $color_org_level_8_foreground;
+}
+
+.org-org-link {
+    color: $color_org_link;
+    text-decoration: underline;
+}
+
+.org-org-property-value {
+}
+
+.org-org-scheduled-previously {
+    color: $color_org_scheduled_previously_foreground
+}
+
+.org-org-scheduled-today {
+    color: $color_org_scheduled_today_foreground
+}
+
+.org-org-sexp-date {
+    color: $color_org_sexp_date_foreground
+}
+
+.org-org-special-keyword {
+    color: $color_org_sexp_date_foreground
+}
+
+.org-org-table {
+    /* org-table */
+    color: $color_org_org_table_foreground;
+}
+
+.org-org-tag {
+    font-weight: bold;
+}
+
+.org-org-target {
+    text-decoration: underline;
+}
+
+.org-org-time-grid {
+    color: $color_org_org_time_grid_table_foreground;
+}
+
+.org-org-todo {
+    color: $color_org_org_todo_foreground;
+}
+
+.org-org-upcoming-deadline {
+    color: $color_org_org_upcoming_deadline_foreground;
+}
+
+.org-org-verbatim {
+    color: $color_org_org_verbatim_foreground;
+    text-decoration: underline;
+}
+
+.org-org-warning {
+    /* org-warning */
+    color: $color_org_org_warning_foreground;
+    font-weight: bold;
+}
+
+.org-outline-1 {
+    color: $color_org_outline_1_foreground;
+}
+
+.org-outline-2 {
+    color: $color_org_outline_2_foreground;
+}
+
+.org-outline-3 {
+    color: $color_org_outline_3_foreground;
+}
+
+.org-outline-4 {
+    color: $color_org_outline_4_foreground;
+}
+
+.org-outline-5 {
+    color: $color_org_outline_5_foreground;
+}
+
+.org-outline-6 {
+    color: $color_org_outline_6_foreground;
+}
+
+.org-outline-7 {
+    color: $color_org_outline_7_foreground;
+}
+
+.org-outline-8 {
+    color: $color_org_outline_8_foreground;
+}
+
+.org-preprocessor {
+    color: $color_org_preprocessor_foreground;
+}
+
+.org-query-replace {
+    color: $color_org_query_replace_foreground;
+    background-color: $color_org_query_replace_background;
+}
+
+.org-regexp-grouping-backslash {
+    font-weight: bold;
+}
+
+.org-regexp-grouping-construct {
+    font-weight: bold;
+}
+
+.org-region {
+    background-color: $color_org_region_foreground;
+}
+
+.org-rmail-highlight {
+}
+
+.org-scroll-bar {
+    background-color: $color_org_scroll_bar_background;
+}
+
+.org-secondary-selection {
+    background-color: $color_org_secondary_selection_background;
+}
+
+.org-shadow {
+    color: $color_org_shadow_foreground;
+}
+
+.org-sh-quoted-exec {
+    background-color: $color_sh_quoted_exec_background;
+    color: $color_sh_quoted_exec_foreground;
+    font-style: $style_sh_quoted_exec;
+    font-weight: $weight_sh_quoted_exec;
+    text-decoration: $decoration_sh_quoted_exec;
+}
+
+.org-show-paren-match {
+    background-color: $color_org_show_paren_match_background;
+}
+
+.org-show-paren-mismatch {
+    color: $color_org_show_paren_mismatch_foreground;
+    background-color: $color_org_show_paren_mismatch_background;
+}
+
+.org-string {
+    background-color : $color_string_background;
+    color: $color_string_foreground;
+    font-style: $style_string;
+    font-weight: $weight_string;
+    text-decoration: $decoration_string;
+}
+
+.org-texinfo-heading {
+    color: $color_org_texinfo_heading_foreground;
+}
+
+.org-tool-bar {
+    color: $color_org_tool_bar_foreground;
+    background-color: $color_org_tool_bar_background;
+}
+
+.org-tooltip {
+    color: $color_org_tooltip_foreground;
+    background-color: $color_org_tooltip_background;
+}
+
+.org-trailing-whitespace {
+    background-color: $color_org_trailing_whitespace_background;
+}
+
+.org-type {
+    background-color : $color_type_background;
+    color: $color_type_foreground;
+    font-style: $style_type;
+    font-weight: $weight_type;
+    text-decoration: $decoration_type;
+}
+
+.org-underline {
+    text-decoration: underline;
+}
+
+.org-variable-name {
+    background-color : $color_variable_name_background;
+    color: $color_variable_name_foreground;
+    font-style: $style_variable_name;
+    font-weight: $weight_variable_name;
+    text-decoration: $decoration_variable_name;
+}  
+
+.org-variable-pitch {
+}
+
+.org-vertical-border {
+}
+
+.org-warning {
+    color: $color_org_warning_foreground;
+    font-weight: bold;
+}
+
+div#preamble {
+    background-color: $color_preamble_background;
+    color: $color_preamble_foreground;
+    font-size: 80%;
+    margin: 0.4em 0em 0.4em 0em;
+    padding: 0.4em;
+    text-align: left;
+
+    * {font-size: inherit;}
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    .date {}
+    .author {
+        font-weight: 500;
+    }
+    .creator {
+        font-style: italic;
+    }
+    .validation {}
+
+    a {
+        background-color: $color_preamble_background;
+        color: $color_preamble_foreground;
+        font-style: italic;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+}
+
+div#postamble {
+    background-color: $color_postamble_background;
+    color: $color_postamble_foreground;
+    font-size: 80%;
+    margin: 0.4em 0em 0.4em 0em;
+    padding: 0.4em;
+    text-align: left;
+
+    * {font-size: inherit;}
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    .date {}
+    .author {
+        font-weight: 500;
+    }
+    .creator {
+        font-style: italic;
+    }
+    .validation {}
+
+    a {
+        background-color: $color_postamble_background;
+        color: $color_postamble_foreground;
+        font-style: italic;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+}
+
+table {
+    font-size: 100%;
+    border-collapse: collapse;
+    margin: .5em 0;
+    background-color: $color_table_background;
+    color: $color_table_foreground;
+
+    th, td {
+        border: 1px solid $color_table_border;
+        vertical-align: top;
+        padding: .3em;
+        margin: 2px;
+        background-color: $color_table_background;
+        color: $color_table_foreground;
+    }
+    th {
+        background-color: $color_table_background_header;
+        color: $color_table_foreground_header; 
+    }
+}
+
+span.underline {
+    text-decoration: underline;
+}
+
+.ra {
+    text-align: right;
+}
+
+.sidebar {
+    float: right;
+    width: 25em;
+    background-color: $color_org_sidebar_background;
+    color: $color_org_sidebar_background;
+    margin: 2em -2em 2em 2em;
+    padding: 1em;
+
+    a {
+        border: none;
+    }
+
+    a:link {
+        color: $color_link; 
+    }
+    a:visited {
+        color: $color_link_visited;
+    }
+    a:hover {
+        color: $color_link_hover;
+    }
+    a:active {
+        color: $color_link_active;
+    }
+}
+
+/* Todo List Styles */
+
+.title {
+    text-align: center;
+}
+
+.todo  {
+    color: red;
+}
+
+.done {
+    color: green;
+}
+
+.fixme {
+    background: $color_fixme_background;
+    font-weight: bold;
+}
+
+.timestamp {
+    color: gray
+}
+
+.timestamp-kwd {
+    color: $color_timestamp_kwd_foreground;
+}
+
+.tag {
+    background-color: $color_tag_foreground;
+    font-weight: normal;
+}
+
+.target {
+    background-color: foreground;
+}
+
+/* FLOATING INDEX */
+//@import "_left-topic-index-postamble-fixed";
+
+/* FLOATING INDEX */
+//@import "_left-topic-index-postamble-toggle";
+
+

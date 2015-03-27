@@ -11,7 +11,7 @@
 #+LANGUAGE: it
 
 #+OPTIONS: html-postamble:t html-preamble:t tex:t
-#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="./org.css" />
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="./org-toggle.css" />
 
 #+LATEX_CLASS: nissl-org-article
 #+LATEX_CLASS_OPTIONS: [a4paper]
@@ -30,6 +30,8 @@
 
 #+LATEX_HEADER:\pagestyle{fancyplain}
 #+LATEX_HEADER:\usemintedstyle{tango}
+
+#+HTML_HEAD: <script type='text/javascript' src='sidebar-toggle.js'></script>
 
 * Premessa al corso di programmazione elementare
 
@@ -120,6 +122,32 @@ Questo sarà un piccolo corso per l'avvio alla programmazione in Ruby, un lingua
 Ruby ha in sé tutte le caratteristiche per essere un ottimo /linguaggio di programmazione multiparadigma/ ed essere adatto per l'insegnamento delle basi della programmazione dei computer moderna.
 
 */Ruby è divertente/*.
+
+#+begin_src d 
+  void main()
+  {
+    foreach (i, row; somedata) {
+      writef ("%2s %7s ", i, somedata_h(i,"nb"));
+      foreach (j, cell; row)
+        if (j) // skip 1st column
+          writef ("%5s %5s ", cell, 1000*to!double(cell));
+      writeln();
+    }
+  }
+#+end_src
+
+#+begin_src cpp 
+  void main()
+  {
+    foreach (i, row; somedata) {
+      writef ("%2s %7s ", i, somedata_h(i,"nb"));
+      foreach (j, cell; row)
+        if (j) // skip 1st column
+          writef ("%5s %5s ", cell, 1000*to!double(cell));
+      writeln();
+    }
+  }
+#+end_src
 
 ** cosa è Ruby
 
