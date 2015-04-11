@@ -500,8 +500,10 @@ pre.src {
 @each $language in awk,
 C,
 clojure,
+Csharp,
 ditaa,
 D,
+Fsharp,
 emacs-lisp,
 haskell,
 latex,
@@ -532,6 +534,7 @@ oz,
 plantuml,
 R,
 sass,
+scala,
 screen,
 sql {
 
@@ -561,6 +564,25 @@ sql {
 	text-align: right;
 	@include background_opaque_15;
     }
+
+    @if $language == Fsharp {
+	pre.src-#{to-lower-case($language)}:before {
+	    content: "F# source.";
+	}
+    }
+
+    @if $language == Csharp {
+	pre.src-#{to-lower-case($language)}:before {
+	    content: "C# source.";
+	}
+    }
+
+    @if $language == Cpp {
+	pre.src-#{to-lower-case($language)}:before {
+	    content: "C++ source.";
+	}
+    }
+
 }
 
 /***********************************************/
@@ -759,7 +781,8 @@ $size: 172%;
     font-style: italic;
 }
 
-.org-keyword {
+.org-keyword,
+.org-tuareg-font-lock-governing {
     background-color : $color_keyword_background;
     color: $color_keyword_foreground;
     font-style: $style_keyword;
@@ -1301,6 +1324,15 @@ span.underline {
     }
 }
 
+div.center,
+p.verse {
+  margin: 1em 33.33% 1em 33.33%;
+  width: 33.33%;
+  display: block;
+  
+}
+
+
 /* Todo List Styles */
 
 .title {
@@ -1337,6 +1369,16 @@ span.underline {
     background-color: foreground;
 }
 
+.footdef {
+  * {font-size: 95%;}
+  sup {
+    & :after { content: "."}
+  }
+  
+  .footpara {
+    display: inline;
+  }
+}
 /* FLOATING INDEX */
 //@import "_left-topic-index-postamble-fixed";
 
