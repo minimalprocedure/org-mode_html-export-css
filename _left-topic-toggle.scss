@@ -115,6 +115,11 @@ $transition: transform 0.3s ease-in-out 0s;
 	transform: translateX(49%);
     }
 
+    & ~ div#footnotes {
+	width: 100% - $sidebar_width;
+	transform: translateX(49%);
+    }
+
     & ~ nav#table-of-contents {
 	transform: translateX(100%);
 	h2 {

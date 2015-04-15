@@ -2214,6 +2214,9 @@ SOFTWARE.
 #sidebar-checkbox:checked ~ section {
   width: 68%;
   transform: translateX(49%); }
+#sidebar-checkbox:checked ~ div#footnotes {
+  width: 68%;
+  transform: translateX(49%); }
 #sidebar-checkbox:checked ~ nav#table-of-contents {
   transform: translateX(100%); }
   #sidebar-checkbox:checked ~ nav#table-of-contents h2 {
