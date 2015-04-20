@@ -424,7 +424,7 @@ th {
   font-size: 10.5pt; }
 
 body {
-  background: #F5F5F5 none repeat scroll 0 0;
+  background: #ffffff none repeat scroll 0 0;
   color: #000000;
   margin: 0;
   padding: 2em; }
@@ -523,6 +523,9 @@ div#content {
   background: #ffffff;
   margin: 0;
   padding: 2em; }
+  div#content p {
+    text-align: justify;
+    line-height: 1.5em; }
 
 div#org-div-home-and-up {
   background-color: transparent;
@@ -538,7 +541,8 @@ div#org-div-home-and-up {
   #table-of-contents #text-table-of-contents {
     margin-top: 0em; }
     #table-of-contents #text-table-of-contents ul {
-      list-style: none; }
+      list-style: none;
+      line-height: 1.5em; }
       #table-of-contents #text-table-of-contents ul li {
         margin: 0.2em 0em 0.2em -0.4em; }
         #table-of-contents #text-table-of-contents ul li a {
@@ -559,13 +563,13 @@ div#org-div-home-and-up {
 .org-ul {
   margin: 1em 0em 1em 1.4em;
   padding: .1em;
-  list-style: none; }
+  list-style: none;
+  line-height: 1.5em; }
   .org-ul li {
     margin: 0.2em 0em 0em 0em;
     /* font-size: 98%;
-    * {font-size: 98%;} */ }
-    .org-ul li b:first-child {
-      margin: 0em 0.6em 0em 0.6em; }
+    * {font-size: 98%;} */
+    /* b:first-child {margin: 0em 0.6em 0em 0.6em;} */ }
   .org-ul li:before {
     font-weight: 700;
     content: ""; }
@@ -611,6 +615,13 @@ code {
 tt {
   color: #0000FF; }
 
+code {
+  padding: 0.1em 0.2em;
+  border: 1px solid #AEBDCC;
+  border-radius: 3px;
+  background: #F5F5F5;
+  margin: 0em 0.1em; }
+
 pre,
 pre.src {
   background-color: #F5F5F5;
@@ -627,6 +638,14 @@ pre.src {
   pre.src * {
     font-family: "Ubuntu Mono", "DejaVu Sans Mono", monospace;
     font-size: 10.5pt; }
+
+sub a,
+sup a {
+  font-size: 80%;
+  margin: 0em 0.1em;
+  text-decoration: underline;
+  padding: 1px 1px 0px;
+  font-weight: bold; }
 
 /* code block custom title **************************/
 pre.src-awk:before {
@@ -1267,6 +1286,28 @@ pre.src-js:before {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=0 );
   /* IE6-9 */ }
 
+pre.src-json:before {
+  content: "json source.";
+  display: block;
+  padding: 0.6em 1em 0.4em 1em;
+  margin: -1em -0.6em 1em -0.6em;
+  font-size: 80%;
+  text-align: right;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(0, 0, 0, 0.15)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=0 );
+  /* IE6-9 */ }
+
 pre.src-julia:before {
   content: "julia source.";
   display: block;
@@ -1443,6 +1484,28 @@ pre.src-r:before {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=0 );
   /* IE6-9 */ }
 
+pre.src-racket:before {
+  content: "racket source.";
+  display: block;
+  padding: 0.6em 1em 0.4em 1em;
+  margin: -1em -0.6em 1em -0.6em;
+  font-size: 80%;
+  text-align: right;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(0, 0, 0, 0.15)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=0 );
+  /* IE6-9 */ }
+
 pre.src-sass:before {
   content: "sass source.";
   display: block;
@@ -1509,8 +1572,96 @@ pre.src-screen:before {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=0 );
   /* IE6-9 */ }
 
+pre.src-sexpr:before {
+  content: "sexpr source.";
+  display: block;
+  padding: 0.6em 1em 0.4em 1em;
+  margin: -1em -0.6em 1em -0.6em;
+  font-size: 80%;
+  text-align: right;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(0, 0, 0, 0.15)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=0 );
+  /* IE6-9 */ }
+
+pre.src-s-expressions:before {
+  content: "s-expressions source.";
+  display: block;
+  padding: 0.6em 1em 0.4em 1em;
+  margin: -1em -0.6em 1em -0.6em;
+  font-size: 80%;
+  text-align: right;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(0, 0, 0, 0.15)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=0 );
+  /* IE6-9 */ }
+
 pre.src-sql:before {
   content: "sql source.";
+  display: block;
+  padding: 0.6em 1em 0.4em 1em;
+  margin: -1em -0.6em 1em -0.6em;
+  font-size: 80%;
+  text-align: right;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(0, 0, 0, 0.15)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=0 );
+  /* IE6-9 */ }
+
+pre.src-xml:before {
+  content: "xml source.";
+  display: block;
+  padding: 0.6em 1em 0.4em 1em;
+  margin: -1em -0.6em 1em -0.6em;
+  font-size: 80%;
+  text-align: right;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(0, 0, 0, 0.15)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=0 );
+  /* IE6-9 */ }
+
+pre.src-yaml:before {
+  content: "yaml source.";
   display: block;
   padding: 0.6em 1em 0.4em 1em;
   margin: -1em -0.6em 1em -0.6em;
@@ -1697,7 +1848,10 @@ pre.src-sql:before {
   font-style: italic; }
 
 .org-keyword,
-.org-tuareg-font-lock-governing {
+.org-tuareg-font-lock-governing,
+.org-nxml-tag-delimiter,
+.org-nxml-element-local-name,
+.org-nxml-tag-slash {
   background-color: #F5F5F5;
   color: #a020f0;
   font-style: normal;
@@ -1967,7 +2121,8 @@ pre.src-sql:before {
   color: #ffffff;
   background-color: #a020f0; }
 
-.org-string {
+.org-string,
+.org-nxml-text {
   background-color: #F5F5F5;
   color: #2F72C2;
   font-style: normal;
@@ -2010,7 +2165,7 @@ pre.src-sql:before {
   font-weight: bold; }
 
 div#preamble {
-  background-color: #F5F5F5;
+  background-color: #ffffff;
   color: #000000;
   font-size: 80%;
   margin: 0.4em 0em 0.4em 0em;
@@ -2026,14 +2181,14 @@ div#preamble {
   div#preamble .creator {
     font-style: italic; }
   div#preamble a {
-    background-color: #F5F5F5;
+    background-color: #ffffff;
     color: #000000;
     font-style: italic; }
   div#preamble a:hover {
     text-decoration: underline; }
 
 div#postamble {
-  background-color: #F5F5F5;
+  background-color: #ffffff;
   color: #000000;
   font-size: 80%;
   margin: 0.4em 0em 0.4em 0em;
@@ -2049,7 +2204,7 @@ div#postamble {
   div#postamble .creator {
     font-style: italic; }
   div#postamble a {
-    background-color: #F5F5F5;
+    background-color: #ffffff;
     color: #000000;
     font-style: italic; }
   div#postamble a:hover {
@@ -2133,8 +2288,13 @@ p.verse {
   font-size: 95%; }
 .footdef sup :after {
   content: "."; }
+.footdef sup a {
+  text-decoration: none;
+  font-weight: normal; }
 .footdef .footpara {
   display: inline; }
+  .footdef .footpara a {
+    font-weight: normal; }
 
 /* FLOATING INDEX */
 /* FLOATING INDEX */
@@ -2166,7 +2326,7 @@ SOFTWARE.
 
 #content {
   border: none !important;
-  background: #F5F5F5 !important; }
+  background: #ffffff !important; }
   #content .title {
     position: fixed;
     top: 0em;

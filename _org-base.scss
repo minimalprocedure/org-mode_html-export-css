@@ -45,7 +45,7 @@ $font_size_mono: 10.5pt;
 $list_bullet_toc:  "";
 $list_bullet: "";
 
-$color_body_background: #F5F5F5;
+$color_body_background: #ffffff; //#F5F5F5;
 $color_background: #ffffff;
 $color_foreground: #000000;
 $color_border: #aaaaaa;
@@ -343,7 +343,6 @@ p {
     margin: 0em 0em 0.4em 0em;
 }
 
-
 a {
     color: $color_link;
     background-color: $color_link_background;
@@ -363,6 +362,10 @@ div#content {
     background: $color_background;
     margin: 0;
     padding: 2em;
+    p {
+	text-align: justify;
+	line-height: 1.5em;
+    }
 }
 
 div#org-div-home-and-up {
@@ -387,6 +390,7 @@ div#org-div-home-and-up {
 	margin-top: 0em;
 	ul {
             list-style: none;
+	    line-height: 1.5em;
             li {
 		margin: 0.2em 0em 0.2em -0.4em;
 		a {
@@ -419,11 +423,12 @@ div#org-div-home-and-up {
     margin: 1em 0em 1em 1.4em;
     padding: .1em;
     list-style: none;
+    line-height: 1.5em;
     li {
         margin: 0.2em 0em 0em 0em;
         /* font-size: 98%;
         * {font-size: 98%;} */
-        b:first-child {margin: 0em 0.6em 0em 0.6em;}
+        /* b:first-child {margin: 0em 0.6em 0em 0.6em;} */
     }
     li:before {
         font-weight: 700;
@@ -467,7 +472,8 @@ code {
     text-decoration: $decoration_code;
     font-family: $font_monospace;
     font-size: $font_size_mono;
-    padding: 0em 1pt 0em 1pt;
+    padding: 0em 1pt 0em 1pt; 
+    
     * {
         font-family: $font_monospace;
         font-size: $font_size_mono;
@@ -476,6 +482,15 @@ code {
 
 tt {
     color: #0000FF;
+}
+
+code {
+    padding: 0.1em 0.2em;
+    border: 1px solid #AEBDCC;
+    border-radius: 3px;
+    background: #F5F5F5;
+    //box-shadow: 1px 1px 1px #888;
+    margin: 0em 0.1em;
 }
 
 pre,
@@ -490,9 +505,22 @@ pre.src {
     font-size: $font_size_mono;
     overflow: auto;
     padding: 5pt;
+    //box-shadow: 1px 1px 1px #888;
     * {
         font-family: $font_monospace;
         font-size: $font_size_mono;
+    }
+}
+
+
+sub,
+sup {
+    a {
+	font-size: 80%;
+	margin: 0em 0.1em;
+	text-decoration: underline;
+	padding: 1px 1px 0px;
+	font-weight: bold;
     }
 }
 
@@ -525,6 +553,7 @@ dot,
 gnuplot,
 java,
 js,
+json,
 julia,
 ledger,
 lilypond,
@@ -533,10 +562,15 @@ octave,
 oz,
 plantuml,
 R,
+racket,
 sass,
 scala,
 screen,
-sql {
+sexpr,
+s-expressions,
+sql,
+xml,
+yaml {
 
     @if $language == sh {
 	pre.src-sh {
@@ -782,7 +816,10 @@ $size: 172%;
 }
 
 .org-keyword,
-.org-tuareg-font-lock-governing {
+.org-tuareg-font-lock-governing,
+.org-nxml-tag-delimiter,
+.org-nxml-element-local-name,
+.org-nxml-tag-slash {
     background-color : $color_keyword_background;
     color: $color_keyword_foreground;
     font-style: $style_keyword;
@@ -1142,7 +1179,8 @@ $size: 172%;
     background-color: $color_org_show_paren_mismatch_background;
 }
 
-.org-string {
+.org-string,
+.org-nxml-text {
     background-color : $color_string_background;
     color: $color_string_foreground;
     font-style: $style_string;
@@ -1372,11 +1410,18 @@ p.verse {
 .footdef {
   * {font-size: 95%;}
   sup {
-    & :after { content: "."}
+      & :after { content: "."}
+      a {
+	  text-decoration: none;
+	  font-weight: normal;
+      }
   }
   
   .footpara {
-    display: inline;
+      display: inline;
+      a {
+	  font-weight: normal;
+      }
   }
 }
 /* FLOATING INDEX */
