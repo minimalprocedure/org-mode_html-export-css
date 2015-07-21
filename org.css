@@ -2298,5 +2298,20 @@ p.verse {
 
 /* FLOATING INDEX */
 /* FLOATING INDEX */
+@media print {
+  div#postamble {
+    display: none !important; }
+
+  div#preamble {
+    display: none !important; }
+
+  .sidebar-toggle {
+    display: none !important; }
+
+  .sidebar-checkbox {
+    display: none !important; }
+
+  h1.title {
+    display: none !important; } }
 
 /*# sourceMappingURL=org.css.map */
