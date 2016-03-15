@@ -95,13 +95,15 @@ $transition: transform 0.3s ease-in-out 0s;
 	}
     }
 
-    section {
+    & > div, & > section {
 	transition: $transition;
 	backface-visibility: hidden;
     }
-
+    
     & > div[id*=outline-container-sec]:last-child,
-    & > section[id*=outline-container-sec]:last-child{
+    & > section[id*=outline-container-sec]:last-child,
+    & > div[id*=outline-container-orgheadline]:last-child,
+    & > section[id*=outline-container-orgheadline]:last-child {
 	clear: both;
 	margin-bottom: 5.2em;
 	padding-bottom: 1em;
@@ -110,7 +112,8 @@ $transition: transform 0.3s ease-in-out 0s;
 
 
 #sidebar-checkbox:checked {
-    & ~ section {
+    & ~ section,
+    & ~ div {
 	width: 100% - $sidebar_width;
 	transform: translateX(49%);
     }

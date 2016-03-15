@@ -95,7 +95,9 @@ $transition: transform 0.3s ease-in-out 0s;
     }
 
     & > div[id*=outline-container-sec]:last-child,
-    & > section[id*=outline-container-sec]:last-child{
+    & > section[id*=outline-container-sec]:last-child,
+    & > div[id*=outline-container-orgheadline]:last-child,
+    & > section[id*=outline-container-orgheadline]:last-child {
 	clear: both;
 	margin-bottom: 5.2em;
 	padding-bottom: 1em;

@@ -2378,15 +2378,15 @@ SOFTWARE.
     display: block;
     height: 7em;
     margin: -7em 0 0; }
-  #content section {
+  #content > div, #content > section {
     transition: transform 0.3s ease-in-out 0s;
     backface-visibility: hidden; }
-  #content > div[id*=outline-container-sec]:last-child, #content > section[id*=outline-container-sec]:last-child {
+  #content > div[id*=outline-container-sec]:last-child, #content > section[id*=outline-container-sec]:last-child, #content > div[id*=outline-container-orgheadline]:last-child, #content > section[id*=outline-container-orgheadline]:last-child {
     clear: both;
     margin-bottom: 5.2em;
     padding-bottom: 1em; }
 
-#sidebar-checkbox:checked ~ section {
+#sidebar-checkbox:checked ~ section, #sidebar-checkbox:checked ~ div {
   width: 68%;
   transform: translateX(49%); }
 #sidebar-checkbox:checked ~ div#footnotes {

@@ -2379,7 +2379,7 @@ SOFTWARE.
       display: block;
       height: 7em;
       margin: -7em 0 0; }
-  #content > div[id*=outline-container-sec]:last-child, #content > section[id*=outline-container-sec]:last-child {
+  #content > div[id*=outline-container-sec]:last-child, #content > section[id*=outline-container-sec]:last-child, #content > div[id*=outline-container-orgheadline]:last-child, #content > section[id*=outline-container-orgheadline]:last-child {
     clear: both;
     margin-bottom: 5.2em;
     padding-bottom: 1em; }
