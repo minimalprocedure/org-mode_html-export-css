@@ -35,11 +35,11 @@
 
 *******************************************************************************************/
 
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro|Ubuntu|Ubuntu+Mono');
 	    
-$font_normal: Ubuntu, "DejaVu Sans", Arial, sans-serif;
-$font_monospace: "Ubuntu Mono", "DejaVu Sans Mono", monospace;
-$font_size_base: 10.5pt;
+$font_normal: "Source Sans Pro", Ubuntu, "DejaVu Sans", Arial, sans-serif;
+$font_monospace: "Source Code Pro", "Ubuntu Mono", "DejaVu Sans Mono", monospace;
+$font_size_base: 12pt;
 $font_size_mono: 10.5pt;
 
 $list_bullet_toc:  "";

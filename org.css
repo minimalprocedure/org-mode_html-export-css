@@ -57,7 +57,7 @@ SOFTWARE.
 
 
 *******************************************************************************************/
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro|Ubuntu|Ubuntu+Mono");
 /*#336699;*/
 /* Normalize.css - BEGIN: https://necolas.github.io/normalize.css/ */
 /*! normalize.css v3.0.2 | MIT License | github.com/necolas/normalize.css */
@@ -420,8 +420,8 @@ th {
 
 /* Normalize.css - END */
 * {
-  font-family: Ubuntu, "DejaVu Sans", Arial, sans-serif;
-  font-size: 10.5pt; }
+  font-family: "Source Sans Pro", Ubuntu, "DejaVu Sans", Arial, sans-serif;
+  font-size: 12pt; }
 
 body {
   background: #ffffff none repeat scroll 0 0;
@@ -455,7 +455,7 @@ h4 {
 h5 {
   font-size: 120%;
   font-weight: 700;
-  margin-bottom: 1.0em; }
+  margin-bottom: 1em; }
 
 h6 {
   font-size: 100%;
@@ -604,12 +604,12 @@ code {
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
-  font-family: "Ubuntu Mono", "DejaVu Sans Mono", monospace;
+  font-family: "Source Code Pro", "Ubuntu Mono", "DejaVu Sans Mono", monospace;
   font-size: 10.5pt;
   padding: 0em 1pt 0em 1pt; }
   tt *,
   code * {
-    font-family: "Ubuntu Mono", "DejaVu Sans Mono", monospace;
+    font-family: "Source Code Pro", "Ubuntu Mono", "DejaVu Sans Mono", monospace;
     font-size: 10.5pt; }
 
 tt {
@@ -630,13 +630,13 @@ pre.src {
   font-weight: normal;
   text-decoration: none;
   border: 1pt solid #AEBDCC;
-  font-family: "Ubuntu Mono", "DejaVu Sans Mono", monospace;
+  font-family: "Source Code Pro", "Ubuntu Mono", "DejaVu Sans Mono", monospace;
   font-size: 10.5pt;
   overflow: auto;
   padding: 5pt; }
   pre *,
   pre.src * {
-    font-family: "Ubuntu Mono", "DejaVu Sans Mono", monospace;
+    font-family: "Source Code Pro", "Ubuntu Mono", "DejaVu Sans Mono", monospace;
     font-size: 10.5pt; }
 
 sub a,
