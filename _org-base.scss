@@ -486,11 +486,17 @@ tt {
 
 code {
     padding: 0.1em 0.2em;
-    //border: 1px solid #AEBDCC;
+    border: 1px solid #AEBDCC;
     border-radius: 3px;
     background: #F5F5F5;
     //box-shadow: 1px 1px 1px #888;
     margin: 0em 0.1em;
+}
+
+.org-src-container {
+  code {
+    border: none;
+  }
 }
 
 pre,
@@ -509,7 +515,7 @@ pre.src {
     * {
         font-family: $font_monospace;
         font-size: $font_size_mono;
-    }
+    }    
 }
 
 
