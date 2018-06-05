@@ -46,6 +46,7 @@ $transition: transform 0.3s ease-in-out 0s;
 #content {
     border: none !important;
     background: $color_body_background !important;
+    overflow-x: hidden;
 
     .title {
 	position: fixed;

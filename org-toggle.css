@@ -2344,7 +2344,8 @@ SOFTWARE.
 
 #content {
   border: none !important;
-  background: #ffffff !important; }
+  background: #ffffff !important;
+  overflow-x: hidden; }
   #content .title {
     position: fixed;
     top: 0em;
