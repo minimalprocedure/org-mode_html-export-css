@@ -1,2 +1,2 @@
-this project has migrated to gitlab.
-Same url but on gitlab.com insted github.com
+this project has migrated on gitlab.
+Same url but on gitlab.com instead github.com
